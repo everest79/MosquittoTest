@@ -1,0 +1,19 @@
+# Admin 可以订阅系统主题
+user admin
+topic read $SYS/#
+
+# Admin 可读写S2C主题 Server To Client
+user admin
+topic readwrite S2C/#
+# Admin 可读取C2S主题 Client To Server
+user admin
+topic read C2S/#
+
+# Users 可读写C2S主题 Client To Server
+user users
+topic readwrite C2S/#
+# Users 可读取S2C主题 Server To Client
+user users
+topic read S2C/#
+
+#pattern write $SYS/broker/connection/%c/state

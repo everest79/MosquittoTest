@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0496A1D1-5E3F-4637-B451-A75F0D7A462C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MosquittoTest.Demo</RootNamespace>
+    <AssemblyName>MosquittoTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mosquitto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mosquitto.designer.cs">
+      <DependentUpon>Mosquitto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Mosquitto.resx">
+      <DependentUpon>Mosquitto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="mosquitto_1.4.15a\aclfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mosquitto_1.4.15a\aclfile.example" />
+    <None Include="mosquitto_1.4.15a\devel\mosquitto.lib" />
+    <None Include="mosquitto_1.4.15a\devel\mosquittopp.lib" />
+    <None Include="mosquitto_1.4.15a\mosquitto - 副本.conf" />
+    <None Include="mosquitto_1.4.15a\mosquitto.conf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mosquitto_1.4.15a\MQTT.cmd" />
+    <None Include="mosquitto_1.4.15a\pwdfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mosquitto_1.4.15a\ReadLog.cmd" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\CA.pl" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\openssl.cfg" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\ca-cert.srl" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\ca-key.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\ca-req.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\cert.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\client.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\demoCA\cacert.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\demoCA\private\cakey.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\demoSRP\srp_verifier.txt.attr" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\dh1024.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\dh2048.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\dh4096.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\dsa-ca.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\dsa-pca.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\dsa1024.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\dsa512.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\dsap.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\pca-cert.srl" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\pca-key.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\pca-req.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\privkey.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\req.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\rsa8192.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\s1024key.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\s1024req.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\s512-key.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\s512-req.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\server.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\server.srl" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\server2.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\testCA.pem" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\progs.pl" />
+    <None Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\tsget.pl" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mosquitto_1.4.15a\ChangeLog.txt" />
+    <Content Include="mosquitto_1.4.15a\devel\mosquitto.h" />
+    <Content Include="mosquitto_1.4.15a\devel\mosquittopp.h" />
+    <Content Include="mosquitto_1.4.15a\devel\mosquitto_plugin.h" />
+    <Content Include="mosquitto_1.4.15a\libeay32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mosquitto_1.4.15a\mosquitto.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mosquitto_1.4.15a\mosquitto.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mosquitto_1.4.15a\mosquittopp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mosquitto_1.4.15a\mosquitto_passwd.exe" />
+    <Content Include="mosquitto_1.4.15a\mosquitto_pub.exe" />
+    <Content Include="mosquitto_1.4.15a\mosquitto_sub.exe" />
+    <Content Include="mosquitto_1.4.15a\msvcr120.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mosquitto_1.4.15a\pthreadVC2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mosquitto_1.4.15a\pthreadVSE2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mosquitto_1.4.15a\PThread\pthreadVC2.dll" />
+    <Content Include="mosquitto_1.4.15a\ssleay32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mosquitto_1.4.15a\vcruntime140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\capi.dll" />
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\dasync.dll" />
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\libcrypto-1_1.dll" />
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\libssl-1_1.dll" />
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\msvcr120.dll" />
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\openssl.exe" />
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\ossltest.dll" />
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\padlock.dll" />
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\demoCA\index.txt" />
+    <Content Include="mosquitto_1.4.15a\Win32_OpenSSL_Bin\PEM\demoSRP\srp_verifier.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="mosquitto_1.4.15a\ClientSDK\paho.mqtt.m2mqtt-4.3.0.0\M2Mqtt\M2Mqtt.Net.csproj">
+      <Project>{a11aef5a-b246-4fe8-8330-06db73cc8074}</Project>
+      <Name>M2Mqtt.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
